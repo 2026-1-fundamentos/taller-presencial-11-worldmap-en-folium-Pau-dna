@@ -1,3 +1,4 @@
+
 """Autograding script."""
 
 import os
@@ -23,7 +24,9 @@ def test_01():
     dataframe = dataframe.set_index("countries")
 
     assert dataframe["count"]["United States of America"] == 579
-@@ -29,4 +29,4 @@
+    assert dataframe["count"]["China"] == 273
+    assert dataframe["count"]["India"] == 174
+    assert dataframe["count"]["United Kingdom"] == 173
     assert dataframe["count"]["Italy"] == 112
 
     if not os.path.exists("files/map.html"):
